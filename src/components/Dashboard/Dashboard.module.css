@@ -1,0 +1,178 @@
+.dashboard{
+    flex: 0.8;
+    height: 100vh;
+    overflow: auto;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+}
+.dashboardLeft{
+    width: 70%;
+    padding: 30px;
+    height: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    background-color: #f4f6fa;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.dashboardHeaderTitle{
+    font-size: 26px;
+    font-weight: 600;
+}
+.dashboardHeaderLargeTitle{
+    font-size: 52px;
+}
+.alertInfo{
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 30px;
+    padding: 15px 20px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    margin: 40px 0px;
+    font-size: 16px;
+    background-color: white;
+}
+.dashboardInstruction{
+    margin-left: 40px;
+}
+.dashboardUpload{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.dashboardResumeBlock{
+    width: 65%;
+    background-color: white;
+    border-radius: 30px;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    font-size: 22px;
+}
+.dashboardInputField{
+    display: flex;
+    align-items: center;
+}
+.analyzeAIButton{
+    font-size: 15px;
+    cursor: pointer;
+    padding: 20px 40px;
+    color: white;
+    font-weight: 700;
+    background: linear-gradient(90deg, #26f8fc, rgba(0, 145, 255, 0.954));
+    border-radius: 30px;
+    border: 3px solid rgb(6, 29, 237);
+
+}
+input{
+    display: none;
+}
+.jobDes{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+.textArea{
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid rgb(6, 29, 237);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    width: 65%;
+    resize: none;
+}
+.analyzeButton{
+    width: 150px;
+    height: 150px;
+    border: 3px solid rgb(6, 29, 237);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background: linear-gradient(90deg,#26f8fc,rgba(0,145,255,0.954));
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+}
+
+.dashboardRight{
+    width: 25%;
+    height: fit-content;
+    box-sizing: border-box;
+    background-color: #f4f6fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+.dashboardRightTopCard{
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+}
+.dashboardRightTopCard div:first-child{
+    font-size: 22px;
+    font-weight: 700;
+}
+.profileImage{
+    width: 85px;
+    height: 85px;
+    border-radius: 100%;
+    margin: 20px 0px;
+}
+
+
+@media screen and (max-width:780px){
+    .dashboard{
+        flex-direction: column;
+    }
+    .dashboardLeft{
+        width: 100%;
+    }
+    .dashboardHeaderTitle{
+        font-size: 26px;
+    }
+    .dashboardHeaderLargeTitle{
+        font-size: 34px;
+    }
+    .dashboardRight{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .dashboardUpload{
+        flex-direction: column;
+    }
+    .dashboardResumeBlock{
+        width: 100%;
+    }
+    .dashboardInputField{
+        width: 100%;
+    }
+    label{
+        width: 100%;
+        text-align: center;
+    }
+    .jobDes{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .textArea{
+        width: 100%;
+    }
+    .analyzeButton{
+        border-radius: 30px;
+        width: 100%;
+        height: fit-content;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+}

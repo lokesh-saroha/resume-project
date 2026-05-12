@@ -7,6 +7,9 @@ import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import LogoutIcon from '@mui/icons-material/Logout';
 import {Link,useLocation} from 'react-router-dom'
 const SideBar = () => {
+
+    const location = useLocation();
+    console.log(location);
   return (
     <div className = {styles.sideBar}>
         <div className={styles.sideBarIcon}>
@@ -16,17 +19,17 @@ const SideBar = () => {
 
         <div className={styles.sideBarOptionsSector}>
 
-            <Link to={'/dashboard'} className={styles.sideBarOption}>
+            <Link to={'/dashboard'} className={[styles.sideBarOption,location.pathname==='/dashboard'?styles.selectedOption :null].join(' ')}>
                 <DashboardIcon sx={{fontSize:22}}/>
                 <div>Dashboard</div>
             </Link>
 
-            <Link to={'/history'} className={styles.sideBarOption}>
+            <Link to={'/history'} className={[styles.sideBarOption,location.pathname==='/history'?styles.selectedOption :null].join(' ')}>
                 <HistoryIcon sx={{fontSize:22}}/>
                 <div>History</div>
             </Link>
 
-            <Link to={'/admin'} className={styles.sideBarOption}>
+            <Link to={'/admin'} className={[styles.sideBarOption,location.pathname==='/admin'?styles.selectedOption :null].join(' ')}>
                 <AdminPanelSettingsIcon sx={{fontSize:22}}/>
                 <div>Admin Panel</div>
             </Link>

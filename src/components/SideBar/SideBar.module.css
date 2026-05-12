@@ -31,3 +31,7 @@
     cursor: pointer;
     text-decoration: none;
 }
+
+.selectedOption{
+    background-color: rgb(72,72,222);
+}

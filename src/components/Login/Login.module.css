@@ -1,0 +1,49 @@
+.Login{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LoginCard{
+    background-color: rgb(3, 3, 120);
+    padding: 20px;
+    width: 30%;
+    border-radius: 20px;
+    color: white;
+}
+
+.LoginCardTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.googlebutton{
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: white;
+    color: rgb(3,3,120);
+    border-radius: 30px;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:780px){
+    .LoginCard{
+        width: 80%;
+    }
+}
