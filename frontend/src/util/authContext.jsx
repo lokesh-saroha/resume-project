@@ -1,19 +1,19 @@
 import { createContext, useState } from "react";
 
 
-export const authContext = createContext();
+export const AuthContext = createContext();
 
-const authProvider = ({children})=>{
+const AuthProvider = ({ children }) => {
     var login = localStorage.getItem('isLogin');
-    var userInfoData = localStorage.getItem('userInfo');
+    var userInfoData = localStorage.getItem('user');
     const [isLogin,setLogin] = useState(login?login:false);
     const [userInfo,setUserInfo]= useState(userInfoData? JSON.parse(userInfoData):null);
 
     return (
-        <authContext.Provider value={{isLogin,setLogin,userInfo,setUserInfo}}>
+        <AuthContext.Provider value={{isLogin,setLogin,userInfo,setUserInfo}}>
             {children}
-        </authContext.Provider>
+        </AuthContext.Provider>
     );
 }
 
-export default authProvider;
+export default AuthProvider;
