@@ -8,7 +8,7 @@ require('./conn');
 app.use(express.json());
 app.use(cors({
     credentials:true,
-    origin:"https://resume-project-pink.vercel.app/"
+    origin:"http://localhost:5173"
 }))
 
 // app.get('/',(req,res)=>{
